@@ -1,5 +1,74 @@
+.container {
+  width: 60%;
+  margin: 0 auto;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 5px 5px; /* row-gap column gap */
+  display: flex;
+}
+
 .color-container {
   width: 100px;
   height: 100px;
-  background-color: aqua;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.color-container p {
+  color: whitesmoke;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  align-self: center;
+}
+
+.circuit-board-green {
+  background-color: #193923;
+}
+.cyber-space-orange {
+  background-color: #c23b20;
+}
+.floppy-yellow {
+  background-color: #b16c24;
+}
+.graphic-green {
+  background-color: #172526;
+}
+.green-com {
+  background-color: #357739;
+}
+.infra-red {
+  background-color: #c43423;
+}
+.megabyte-blue {
+  background-color: #201e2c;
+}
+.megahertz-maroon {
+  background-color: #621b23;
+}
+.online-orange {
+  background-color: #d65128;
+}
+.point-and-click-orange {
+  background-color: #4c9830;
+}
+.plug-and-play-pink {
+  background-color: #c33429;
+}
+.transistor-yellow {
+  background-color: #dc6e2e;
+}
+.ultra-violet {
+  background-color: #3d0916;
+}
+.web-surfing-blue {
+  background-color: #192263;
+}
+.world-wide-yellow {
+  background-color: #c1a234;
+}
+.www-purple {
+  background-color: #282329;
 }
