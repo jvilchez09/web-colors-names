@@ -1,3 +1,7 @@
+body {
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}
 .container {
   width: 60%;
   margin: 0 auto;
@@ -5,6 +9,12 @@
   justify-content: center;
   gap: 5px 5px; /* row-gap column gap */
   display: flex;
+}
+
+.preview-container {
+  width: 92%;
+  height: 60vh;
+  background-color: rgb(236, 236, 236);
 }
 
 .color-container {
@@ -17,11 +27,22 @@
 
 .color-container p {
   color: whitesmoke;
-  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
   font-weight: 500;
-  font-size: 10px;
+  font-size: 8px;
   align-self: center;
+  /* background-color: rgba(231, 231, 231, 0.171);
+  width: 80%;
+  padding: 25px 5px;
+  text-align: center;
+  border-radius: 3px; */
+}
+
+.color-container p:hover {
+  background-color: rgba(231, 231, 231, 0.171);
+  width: 80%;
+  padding: 25px 5px;
+  text-align: center;
+  border-radius: 3px;
 }
 
 .circuit-board-green {
@@ -66,9 +87,11 @@
 .web-surfing-blue {
   background-color: #192263;
 }
+
 .world-wide-yellow {
   background-color: #c1a234;
 }
+
 .www-purple {
   background-color: #282329;
 }
