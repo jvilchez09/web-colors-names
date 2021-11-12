@@ -28,6 +28,8 @@ console.log(mainContainer);
 
 let colorContainer = document.createElement("div");
 let textContainer = document.createElement("p");
+let previewContainer = document.querySelector(".preview-container");
+let previousClass = "white";
 //classList.add("color-container");
 
 // colors.forEach((element) => {});
@@ -49,13 +51,26 @@ for (const key in colors) {
   colorContainer.classList.add(key);
 
   //agregar nombre de color al color
-  textContainer.textContent = key;
+  let colorNames = key.split("-");
+  let colorName =
+    colorNames[0].slice(0, 1).toUpperCase() + colorNames[0].slice(1);
+  colorNames.shift();
+  colorName += ` ${colorNames.join(" ")}`;
+  textContainer.textContent = colorName;
   colorContainer.appendChild(textContainer);
   let newContainer = colorContainer.cloneNode(true);
 
   let [color, link] = colors[key];
   newContainer.addEventListener("click", function () {
     copyColor(...colors[key]);
+  });
+
+  newContainer.addEventListener("mouseover", function () {
+    previewContainer.classList.remove(previousClass);
+    previewContainer.classList.add(key);
+    // classList.remove
+    // copyColor(...colors[key]);
+    previousClass = key;
   });
 
   // colorContainer.addEventListener("click", copyColor(...colors[key]));

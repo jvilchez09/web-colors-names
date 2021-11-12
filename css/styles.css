@@ -45,6 +45,10 @@ body {
   border-radius: 3px;
 }
 
+.white {
+  background-color: white;
+}
+
 .circuit-board-green {
   background-color: #193923;
 }
