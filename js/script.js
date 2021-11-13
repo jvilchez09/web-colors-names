@@ -51,12 +51,12 @@ for (const key in colors) {
   colorContainer.classList.add(key);
 
   //agregar nombre de color al color
-  let colorNames = key.split("-");
-  let colorName =
-    colorNames[0].slice(0, 1).toUpperCase() + colorNames[0].slice(1);
-  colorNames.shift();
-  colorName += ` ${colorNames.join(" ")}`;
-  textContainer.textContent = colorName;
+  let colorNames = key.split("-").join(" ");
+  // let colorName =
+  //   colorNames[0].slice(0, 1).toUpperCase() + colorNames[0].slice(1);
+  // colorNames.shift();
+  // let colorName = colorNames;
+  textContainer.textContent = colorNames;
   colorContainer.appendChild(textContainer);
   let newContainer = colorContainer.cloneNode(true);
 
@@ -73,6 +73,12 @@ for (const key in colors) {
     previousClass = key;
   });
 
+  newContainer.addEventListener("mouseout", function () {
+    previewContainer.classList.remove(previousClass);
+    previewContainer.classList.add("white");
+    // classList.remove
+    // copyColor(...colors[key]);
+  });
   // colorContainer.addEventListener("click", copyColor(...colors[key]));
   mainContainer.append(newContainer);
 
