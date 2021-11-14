@@ -81,10 +81,4 @@ for (const key in colors) {
   });
   // colorContainer.addEventListener("click", copyColor(...colors[key]));
   mainContainer.append(newContainer);
-
-  // mainContainer.append(colorContainer.cloneNode(true));
-
-  // const element = colors[key];
-  // console.log(key);
-  // console.log(colors[key]);
 }
