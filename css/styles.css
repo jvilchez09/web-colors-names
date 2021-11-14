@@ -29,10 +29,10 @@ body {
   justify-content: center;
 }
 
-.color-container:hover {
+/* .color-container:hover {
   opacity: 0.8;
   padding-top: 20px;
-}
+} */
 
 .color-container p {
   color: whitesmoke;
