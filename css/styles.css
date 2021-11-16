@@ -37,7 +37,9 @@ body {
 .color-container p {
   color: whitesmoke;
   font-weight: 500;
-  font-size: 8px;
+  font-size: 12px;
+
+  text-align: center;
   align-self: center;
   /* background-color: rgba(231, 231, 231, 0.171);
   width: 80%;
@@ -50,11 +52,10 @@ p:first-letter {
   text-transform: uppercase;
 }
 
-.color-container p:hover {
-  background-color: rgba(231, 231, 231, 0.171);
+.color-container:hover p {
+  background-color: rgba(231, 231, 231, 0.233);
   width: 80%;
-  padding: 25px 5px;
-  text-align: center;
+  padding: 15px 5px;
   border-radius: 3px;
 }
 

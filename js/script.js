@@ -42,6 +42,8 @@ let previousClass = "white";
  * Copy Color
  */
 
+console.log(colorContainer);
+
 const copyColor = (color, link) => {
   return console.log(color, link);
 };
@@ -66,8 +68,22 @@ for (const key in colors) {
   });
 
   newContainer.addEventListener("mouseover", function () {
+    /**
+     * Este es el contenedor donde se previsualiza el color
+     */
     previewContainer.classList.remove(previousClass);
     previewContainer.classList.add(key);
+
+    let parent = document.getElementsByClassName(`color-container  ${key}`);
+    // let parent = document.querySelectorAll(`color-container ${key}`);
+    // console.log(parent[0]);
+    // let child = parent.getElementsByTagName("p")[0];
+    let [hexColor, link] = colors[key];
+    console.log(hexColor);
+    // textContainer.textContent = "Copy";
+    // let textContainer2 = document.createElement("p");
+    parent[0].innerHTML = `<p>Copy<br>${hexColor}</p> `;
+    // parent[0].appendChild(textContainer2);
     // classList.remove
     // copyColor(...colors[key]);
     previousClass = key;
@@ -76,6 +92,8 @@ for (const key in colors) {
   newContainer.addEventListener("mouseout", function () {
     previewContainer.classList.remove(previousClass);
     previewContainer.classList.add("white");
+    // textContainer.textContent = colorNames;
+
     // classList.remove
     // copyColor(...colors[key]);
   });
