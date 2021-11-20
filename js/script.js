@@ -24,7 +24,7 @@ const colors = {
 console.log(colors);
 
 const mainContainer = document.querySelector(".container");
-console.log(mainContainer);
+// console.log(mainContainer);
 
 let colorContainer = document.createElement("div");
 let textContainer = document.createElement("p");
@@ -48,9 +48,16 @@ const copyColor = (color, link) => {
   return console.log(color, link);
 };
 
+mainContainer.addEventListener("mouseover", function (e) {
+  if (e.target.classList.contains("color-container")) {
+    console.log("Lo contiene");
+  }
+});
+
 for (const key in colors) {
   colorContainer.className = "color-container";
   colorContainer.classList.add(key);
+  colorContainer.setAttribute("name", key);
 
   //agregar nombre de color al color
   let colorNames = key.split("-").join(" ");
